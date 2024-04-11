@@ -19,11 +19,17 @@ const AdminSidebar = ({ isDrawerOpen, setIsDrawerOpen }: any) => {
       } bg-gradient-to-b from-[#404047] via-[#333338] to-[#1e1e1f] text-white`}
     >
       {/*Sidebar Icon*/}
-      <h1 className=" uppercase text-xl font-semibold !transition-all !ease-in-out !duration-500">
+      <h1
+        className="uppercase border-b text-center border-gray-50/10 pb-6 text-xl font-semibold !transition-all !ease-in-out !duration-500"
+        style={{
+          borderImage:
+            "linear-gradient(to right, rgba(0,0,0,0), #5e5e63, rgba(0,0,0,0)) 1",
+        }}
+      >
         {isDrawerOpen ? "Dashboard" : "D"}
       </h1>
       {/*MENU item*/}
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 pt-4">
         {useMenuItems.map((menuItem) => (
           <>
             <div
@@ -40,7 +46,7 @@ const AdminSidebar = ({ isDrawerOpen, setIsDrawerOpen }: any) => {
                   <div className="bg-red-500 w-5 h-full rounded-l-full"></div>
                 </div>
               ) : null} */}
-              {router.pathname === menuItem.route ? (
+              {/* {router.pathname === menuItem.route ? (
                 <>
                   <div
                     className={`absolute z-10  top-1/2 -right-4 bg-[#5e5e63]  flex items-end ${
@@ -59,7 +65,7 @@ const AdminSidebar = ({ isDrawerOpen, setIsDrawerOpen }: any) => {
                 </>
               ) : (
                 ""
-              )}
+              )} */}
               <div
                 className={`flex items-center ${isDrawerOpen ? "gap-2" : ""}`}
               >

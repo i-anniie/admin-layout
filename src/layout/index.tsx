@@ -42,7 +42,7 @@ const AdminLayout = ({
         <div
           className={`${
             isDrawerOpen ? "w-[22rem]" : "w-24"
-          } !transition-all !ease-in-out !duration-500 m-4 sticky top-0`}
+          } !transition-all !ease-in-out !duration-500 m-4 sticky top-4`}
           // onMouseEnter={handleSidebarHover}
           // onMouseLeave={handleSidebarLeave}
         >
@@ -52,10 +52,12 @@ const AdminLayout = ({
           />
         </div>
         <div className="w-full flex flex-col gap-4 min-h-screen">
-          <AdminNavbar
-            isDrawerOpen={isDrawerOpen}
-            setIsDrawerOpen={setIsDrawerOpen}
-          />
+          <div className="sticky top-0">
+            <AdminNavbar
+              isDrawerOpen={isDrawerOpen}
+              setIsDrawerOpen={setIsDrawerOpen}
+            />
+          </div>
           <div className="h-full">{children}</div>
         </div>
       </main>
