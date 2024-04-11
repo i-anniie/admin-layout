@@ -38,11 +38,11 @@ const AdminLayout = ({
         <meta property="og:image" content="" />
       </Head>
 
-      <main className="relative w-full flex gap-4">
+      <main className="relative w-full h-screen overflow-y-scroll flex">
         <div
           className={`${
-            isDrawerOpen ? "w-80" : "w-24"
-          } !transition-all !ease-in-out !duration-300 m-2`}
+            isDrawerOpen ? "w-[22rem]" : "w-24"
+          } !transition-all !ease-in-out !duration-500 m-4 sticky top-0`}
           // onMouseEnter={handleSidebarHover}
           // onMouseLeave={handleSidebarLeave}
         >

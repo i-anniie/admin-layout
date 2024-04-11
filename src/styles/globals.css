@@ -21,3 +21,9 @@
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .common-transition {
+    @apply transition-all ease-in-out duration-300 !important;
+  }
+}
